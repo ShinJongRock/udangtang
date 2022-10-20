@@ -4,7 +4,7 @@ import Table from 'react-bootstrap/Table';
 
 
 const Home = () => {
-  const [data, setData] = useState();
+  // const [data, setData] = useState();
 
   // useEffect(()=>{
   //   (async ()=>{
@@ -14,11 +14,7 @@ const Home = () => {
   //   })()
   // },[])
 
-  // axios.post("/list",{
-  //   roomName: "10",
-  //   roomPw: "123",
-  //   roomHost: "123"
-  // });
+
 
   return (
     <Table responsive="xl">

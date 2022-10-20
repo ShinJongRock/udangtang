@@ -14,10 +14,8 @@ const HomeLest = ({show , onHide}) => {
     roomhost: '',
     roompw: '',
     roomname: '',
-
-
-    
 })
+
   // const [roomhost,setroomhost] = useState("");
 //   const [roompw,setroompw] = useState("");
 //   const [roomname,setroomname] = useState("");
@@ -37,6 +35,10 @@ const HomeLest = ({show , onHide}) => {
     console.log(event.target.value);
   }
 
+  // const handleSubmit = () => {
+  //   axios.post("/list",inputs);
+  // }
+
 
   return (
     <Modal
@@ -46,7 +48,6 @@ const HomeLest = ({show , onHide}) => {
     aria-labelledby="contained-modal-title-vcenter"
     centered
   >
-
     <Modal.Header closeButton>
       <Modal.Title id="contained-modal-title-vcenter">
         방 만들기
