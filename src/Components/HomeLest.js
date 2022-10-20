@@ -35,9 +35,14 @@ const HomeLest = ({show , onHide}) => {
     console.log(event.target.value);
   }
 
-  // const handleSubmit = () => {
-  //   axios.post("/list",inputs);
-  // }
+  const handleSubmit = () => {
+    try{
+     axios.post("http://udangtangtangapp-env.eba-xaipu9ej.ap-northeast-2.elasticbeanstalk.com/createRoom",inputs);
+    }
+    catch (e) {
+      console.error("오류")
+    }
+  }
 
 
   return (
