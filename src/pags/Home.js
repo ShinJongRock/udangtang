@@ -1,14 +1,27 @@
 
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import Table from 'react-bootstrap/Table';
 
 
 const Home = () => {
-  return (
- 
-   
-    <Table responsive="xl">
+  const [data, setData] = useState();
 
+  useEffect(()=>{
+    (async ()=>{
+      const res = await axios.get("/list");
+      console.log(res);
+      setData(res);
+    })()
+  },[])
+
+  // axios.post("/list",{
+  //   roomName: "10",
+  //   roomPw: "123",
+  //   roomHost: "123"
+  // });
+
+  return (
+    <Table responsive="xl">
     <thead>
       <tr>
         <th>번호</th>
@@ -17,14 +30,18 @@ const Home = () => {
         <th>인원</th>
       </tr>
     </thead>
-
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>집가고 싶다</td>
-        <td>조창훈</td>
-        <td>2</td>
-      </tr>
+    {
+      data.map((e)=>
+          <tr>
+            <td>{e.key}</td>
+            <td>{e.name}</td>
+            <td>조창훈</td>
+            <td>2</td>
+          </tr>
+      )
+    }
+
       <tr>
         <td>2</td>
         <td>나도</td>
