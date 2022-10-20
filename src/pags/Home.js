@@ -6,13 +6,13 @@ import Table from 'react-bootstrap/Table';
 const Home = () => {
   const [data, setData] = useState();
 
-  useEffect(()=>{
-    (async ()=>{
-      const res = await axios.get("/list");
-      console.log(res);
-      setData(res);
-    })()
-  },[])
+  // useEffect(()=>{
+  //   (async ()=>{
+  //     const res = await axios.get("/list");
+  //     console.log(res);
+  //     setData(res);
+  //   })()
+  // },[])
 
   // axios.post("/list",{
   //   roomName: "10",
